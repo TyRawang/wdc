@@ -37,9 +37,8 @@
           <li><a href="index.html" data-nav="home">Home</a></li>
           <li><a href="about.html" data-nav="about">About</a></li>
           <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
+          <li><a href="process.html" data-nav="process">Process</a></li>
           <li><a href="blog.html" data-nav="blog">Blog</a></li>
-          <li><a href="categories.html" data-nav="categories">Categories</a></li>
-          <li><a href="tags.html" data-nav="tags">Tags</a></li>
           <li><a href="contact.html" data-nav="contact">Contact Us</a></li>
         </ul>
       </nav>
@@ -47,7 +46,8 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="page-banner">
+    <section class="page-banner page-banner--image">
+      <img class="page-banner__bg" src="images/banner/design-workspace.jpg" srcset="images/banner/design-workspace-800.jpg 800w, images/banner/design-workspace.jpg 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high">
       <div class="container">
         <h1>Our Work</h1>
         <p>Websites we've designed and built for service businesses, retailers and organizations across Canada.</p>
@@ -63,113 +63,202 @@
           <button class="chip" type="button" data-filter="company" aria-pressed="false">Companies &amp; Organizations<span class="chip__count">(2)</span></button>
         </div>
         <p class="visually-hidden" id="portfolio-status" role="status" aria-live="polite"></p>
-        <div class="grid grid--projects" id="portfolio-grid">
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://containerland.co/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <div class="case-studies" id="portfolio-grid">
+          <article class="case-study reveal" data-category="service" id="containerland">
+            <a class="case-study__media" href="https://containerland.co/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>containerland.co</em></span>
               <img src="images/portfolio/containerland.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Container Rental &amp; Storage</span><span>Calgary, AB</span></div>
-              <h2 class="project-card__title">Container Land</h2>
-              <p>Container rental, sales and storage with next-day delivery, built to turn visitors into rental and purchase enquiries.</p>
-              <a class="project-card__link" href="https://containerland.co/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Container Land (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Container Land</h2>
+              <p class="case-study__client">Container Land rents, sells and customizes shipping containers, and offers mobile storage and self-storage across Calgary and southern Alberta.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>We built a conversion-focused website that takes customers from browsing to booking in a few clicks. The homepage explains the process in four simple steps, and dedicated pages for every service and every town they serve help the business show up in local searches.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Online booking: pick a container size, date and location</li>
+                <li>Separate pages for renting, buying, container buildings, mobile storage, self-storage and freight shipping</li>
+                <li>Location pages for 21 communities, from Airdrie to Vulcan</li>
+                <li>Verified Google reviews shown on the homepage</li>
+                <li>Click-to-call and free-quote buttons always in the header</li>
+              </ul>
+              <a class="btn btn--outline" href="https://containerland.co/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Container Land (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://gocleaning.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="service" id="gocleaning">
+            <a class="case-study__media" href="https://gocleaning.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>gocleaning.ca</em></span>
               <img src="images/portfolio/gocleaning.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Cleaning Services</span><span>Calgary, AB</span></div>
-              <h2 class="project-card__title">Go Cleaning</h2>
-              <p>Family-owned residential, commercial and carpet cleaning, with free-quote calls to action throughout.</p>
-              <a class="project-card__link" href="https://gocleaning.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Go Cleaning (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Go Cleaning</h2>
+              <p class="case-study__client">Go Cleaning is a family-owned residential, commercial and carpet cleaning company serving Calgary, Edmonton and Vancouver.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A fresh, friendly website built around one goal: getting visitors to request a quote. Trust signals such as ratings, guarantees and insurance are placed right where customers are deciding, so booking feels like an easy choice.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Free-quote and click-to-call buttons in the hero</li>
+                <li>Service pages for residential, commercial and carpet cleaning</li>
+                <li>City pages for Calgary, Edmonton and Vancouver</li>
+                <li>Trust badges: Google rating, insured and bonded, satisfaction guarantee</li>
+                <li>Dedicated reviews page and customer testimonials</li>
+              </ul>
+              <a class="btn btn--outline" href="https://gocleaning.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Go Cleaning (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="retail">
-            <a class="project-card__media" href="https://okotoksvacuums.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="retail" id="okotoksvacuums">
+            <a class="case-study__media" href="https://okotoksvacuums.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>okotoksvacuums.ca</em></span>
               <img src="images/portfolio/okotoksvacuums.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
-              <div class="meta"><span>Retail &amp; Repairs</span><span>Okotoks, AB</span></div>
-              <h2 class="project-card__title">Okotoks Vacuums</h2>
-              <p>Vacuum sales, parts and service, with a searchable product catalogue and brand pages.</p>
-              <a class="project-card__link" href="https://okotoksvacuums.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Okotoks Vacuums (opens in a new tab)</span></a>
+            <div class="case-study__body">
+              <div class="meta"><span>Retail &amp; Ecommerce</span><span>Okotoks, AB</span></div>
+              <h2 class="case-study__title">Okotoks Vacuums</h2>
+              <p class="case-study__client">Okotoks Vacuums is a vacuum store serving Okotoks, south Calgary, High River and the foothills, offering sales, installation, repairs, parts and filters.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>An online catalogue and store that shows off the shop's range and brings people into the showroom. Customers can browse by vacuum type or brand, search for products and parts, and book repairs, all from one place.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Product catalogue organized by type: canister, central, commercial and upright</li>
+                <li>Brand pages for Miele, SEBO, Nilfisk and more</li>
+                <li>Product search and shopping cart</li>
+                <li>Sections for parts, filters and repair services</li>
+                <li>Newsfeed for promotions, coupons and store updates</li>
+              </ul>
+              <a class="btn btn--outline" href="https://okotoksvacuums.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Okotoks Vacuums (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://cargomoverscanada.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="service" id="cargomoverscanada">
+            <a class="case-study__media" href="https://cargomoverscanada.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>cargomoverscanada.com</em></span>
               <img src="images/portfolio/cargomoverscanada.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Moving &amp; Storage</span><span>Calgary, AB</span></div>
-              <h2 class="project-card__title">Cargo Movers Canada</h2>
-              <p>Moving, packing and storage across Canada, with a step-by-step quote form on the homepage.</p>
-              <a class="project-card__link" href="https://cargomoverscanada.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Cargo Movers Canada (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Cargo Movers Canada</h2>
+              <p class="case-study__client">Cargo Movers Canada started as a local Calgary business and now provides moving, packing and storage across Canada.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A quote-first website. The homepage opens with a multi-step quote form, so customers can request a price without hunting for a contact page. Clear messaging such as "no fuel surcharges" and "no hidden fees" gives visitors the confidence to get in touch.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Multi-step quote form covering route, date, property type and size</li>
+                <li>Service pages for moving, packing and storage</li>
+                <li>Key numbers and guarantees up front</li>
+                <li>Testimonials and FAQ pages to answer common questions</li>
+                <li>Phone, email and address in the top bar on every page</li>
+              </ul>
+              <a class="btn btn--outline" href="https://cargomoverscanada.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Cargo Movers Canada (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://kingsmanmoving.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="service" id="kingsmanmoving">
+            <a class="case-study__media" href="https://kingsmanmoving.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>kingsmanmoving.ca</em></span>
               <img src="images/portfolio/kingsmanmoving.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Moving Services</span><span>Calgary, AB</span></div>
-              <h2 class="project-card__title">Kingsman Moving</h2>
-              <p>A bold, patriotic brand for a Calgary moving company, with a prominent call-now button.</p>
-              <a class="project-card__link" href="https://kingsmanmoving.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Kingsman Moving (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Kingsman Moving</h2>
+              <p class="case-study__client">Kingsman Moving Services is a Calgary moving company offering moving, packing, storage and container rental.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A bold, memorable brand with a proud Canadian theme, paired with a simple site that's easy to use. Prominent "Call Now" buttons keep the focus on getting customers on the phone.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Distinctive red-and-blue Canadian illustration in the hero</li>
+                <li>Services for moving, packing, storage and container rental</li>
+                <li>Call-now buttons for instant contact</li>
+                <li>"Why choose us" section and client testimonials</li>
+                <li>Simple four-page structure that's easy to navigate</li>
+              </ul>
+              <a class="btn btn--outline" href="https://kingsmanmoving.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Kingsman Moving (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://unitedmoverscanada.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="service" id="unitedmoverscanada">
+            <a class="case-study__media" href="https://unitedmoverscanada.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>unitedmoverscanada.com</em></span>
               <img src="images/portfolio/unitedmoverscanada.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
-              <div class="meta"><span>Moving Services</span><span>Canada</span></div>
-              <h2 class="project-card__title">United Movers Canada</h2>
-              <p>A moving company website that puts the quote request front and centre.</p>
-              <a class="project-card__link" href="https://unitedmoverscanada.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> United Movers Canada (opens in a new tab)</span></a>
+            <div class="case-study__body">
+              <div class="meta"><span>Moving Services</span><span>Calgary, AB</span></div>
+              <h2 class="case-study__title">United Movers Canada</h2>
+              <p class="case-study__client">United Movers Canada is a Calgary-based moving company helping families and businesses move homes and offices.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>We put the quote form right in the hero, so visitors can request a free quote the moment they arrive. Supporting pages explain each service and build trust with testimonials, FAQs and the company's core values.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Free-quote form front and centre on the homepage</li>
+                <li>Pages for moving, packing and storage</li>
+                <li>Content for both home and office moves</li>
+                <li>Testimonials and FAQ pages</li>
+                <li>Core values section that highlights integrity and respect</li>
+              </ul>
+              <a class="btn btn--outline" href="https://unitedmoverscanada.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> United Movers Canada (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="service">
-            <a class="project-card__media" href="https://superhumandemolition.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="service" id="superhumandemolition">
+            <a class="case-study__media" href="https://superhumandemolition.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>superhumandemolition.ca</em></span>
               <img src="images/portfolio/superhumandemolition.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Demolition</span><span>Toronto, ON</span></div>
-              <h2 class="project-card__title">Super Human Demolition</h2>
-              <p>Interior demolition for Toronto and Southern Ontario, with project galleries and cost guides.</p>
-              <a class="project-card__link" href="https://superhumandemolition.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Super Human Demolition (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Super Human Demolition</h2>
+              <p class="case-study__client">Super Human Demolition provides interior demolition, deconstruction and excavation for homeowners and contractors across Toronto and Southern Ontario.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A high-energy website that matches the brand's "Superhuman" personality, backed by plenty of useful content. Project pages, cost guides and a blog help the company rank for demolition searches across Ontario.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Project portfolio by type: basement, bathroom, kitchen, commercial and more</li>
+                <li>Ontario demolition and underpinning cost guides</li>
+                <li>Free consultation form and a dedicated quote page</li>
+                <li>Google reviews and certifications displayed</li>
+                <li>Blog with tips and advice for homeowners</li>
+              </ul>
+              <a class="btn btn--outline" href="https://superhumandemolition.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Super Human Demolition (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="company">
-            <a class="project-card__media" href="https://goodkamma.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="company" id="goodkamma">
+            <a class="case-study__media" href="https://goodkamma.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>goodkamma.com</em></span>
               <img src="images/portfolio/goodkamma.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Commerce &amp; Technology</span><span>Calgary, AB</span></div>
-              <h2 class="project-card__title">Good Kamma Inc.</h2>
-              <p>A clean, minimal site for an independent company that builds and operates businesses in commerce and technology.</p>
-              <a class="project-card__link" href="https://goodkamma.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Good Kamma Inc. (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Good Kamma Inc.</h2>
+              <p class="case-study__client">Good Kamma Inc. is an independent Calgary company that builds and operates businesses in commerce and technology.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A deliberately minimal, hand-built website that says exactly what the company does and nothing more. Generous white space, refined typography and an illustrated logo give it a calm, confident feel.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Lightweight, fast-loading site with no heavy page builder</li>
+                <li>Home, about and contact pages, plus privacy and terms</li>
+                <li>Illustrated brand mark front and centre</li>
+                <li>One clear path for business enquiries</li>
+              </ul>
+              <a class="btn btn--outline" href="https://goodkamma.com/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Good Kamma Inc. (opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="project-card reveal" data-category="company">
-            <a class="project-card__media" href="https://karmatashiling.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <article class="case-study reveal" data-category="company" id="karmatashiling">
+            <a class="case-study__media" href="https://karmatashiling.ca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
               <span class="browser-bar"><span></span><span></span><span></span><em>karmatashiling.ca</em></span>
               <img src="images/portfolio/karmatashiling.jpg" alt="" width="1200" height="750" loading="lazy">
             </a>
-            <div class="project-card__body">
+            <div class="case-study__body">
               <div class="meta"><span>Non-profit</span><span>Edmonton, AB</span></div>
-              <h2 class="project-card__title">Karma Tashi Ling</h2>
-              <p>A Kagyu Tibetan Buddhist meditation society, with programs, news and ways to support the centre.</p>
-              <a class="project-card__link" href="https://karmatashiling.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Karma Tashi Ling (opens in a new tab)</span></a>
+              <h2 class="case-study__title">Karma Tashi Ling</h2>
+              <p class="case-study__client">Karma Tashi Ling is a Kagyu Tibetan Buddhist meditation society in Edmonton, established in 1986.</p>
+              <h3 class="case-study__label">The project</h3>
+              <p>A warm, welcoming website for a long-standing community. It organizes a large amount of teaching and program content so newcomers and members can easily find practice times, events and resources.</p>
+              <h3 class="case-study__label">Highlights</h3>
+              <ul class="card__list case-study__list">
+                <li>Program calendar and practice schedule, including Sunday Sadhana</li>
+                <li>Pages on Tibetan Buddhism, the Kagyu lineage and Thrangu Rinpoche</li>
+                <li>Beginners' reading list and practice resources</li>
+                <li>News posts for visiting teachers and events</li>
+                <li>Support page so members can help sustain the centre</li>
+              </ul>
+              <a class="btn btn--outline" href="https://karmatashiling.ca/" target="_blank" rel="noopener">Visit website<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg><span class="visually-hidden"> Karma Tashi Ling (opens in a new tab)</span></a>
             </div>
           </article>
         </div>
@@ -199,6 +288,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="process.html">Process &amp; Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -208,13 +298,16 @@
           <ul class="footer-links">
             <li><a href="categories.html">Categories</a></li>
             <li><a href="tags.html">Tags</a></li>
-            <li><a href="https://webdesigncalgary.net/privacy-policy/">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; <span data-year>2025</span> Web Design Calgary. All rights reserved.</p>
-        <p>Made in Calgary</p>
+        <ul class="footer-legal">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li>Made in Calgary</li>
+        </ul>
       </div>
     </div>
   </footer>

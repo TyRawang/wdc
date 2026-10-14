@@ -37,8 +37,8 @@ document.documentElement.classList.remove("no-js");
 /* ---------- Highlight the current page in the nav ---------- */
 (() => {
   const page = document.body.dataset.page;
-  // Single posts belong to the Blog section.
-  const section = page === "post" ? "blog" : page;
+  // Posts, categories and tags belong to the Blog section.
+  const section = ["post", "categories", "tags"].includes(page) ? "blog" : page;
   document.querySelectorAll(".site-nav a[data-nav]").forEach((link) => {
     if (link.dataset.nav === section) link.setAttribute("aria-current", "page");
   });
@@ -75,7 +75,7 @@ observeReveals();
 (() => {
   const buttons = document.querySelectorAll(".portfolio-filters [data-filter]");
   if (!buttons.length) return;
-  const cards = document.querySelectorAll("#portfolio-grid .project-card");
+  const cards = document.querySelectorAll("#portfolio-grid [data-category]");
   const status = document.getElementById("portfolio-status");
 
   buttons.forEach((btn) => {
@@ -100,16 +100,15 @@ observeReveals();
   });
 })();
 
-/* ---------- Contact form ---------- */
-(() => {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
-
-  const status = document.getElementById("form-status");
+/* ---------- Forms (contact + audit) ---------- */
+document.querySelectorAll("form[data-validate]").forEach((form) => {
+  const status = form.querySelector(".form__status");
+  const requiredSelector = "input[required], textarea[required]";
 
   const messages = {
     name: "Please enter your name.",
     email: "Please enter a valid email address.",
+    website: "Please enter your website address, starting with https://",
     message: "Please tell us a little about your project.",
   };
 
@@ -121,7 +120,7 @@ observeReveals();
     return valid;
   };
 
-  form.querySelectorAll("input[required], textarea[required]").forEach((field) => {
+  form.querySelectorAll(requiredSelector).forEach((field) => {
     field.addEventListener("blur", () => validateField(field));
     field.addEventListener("input", () => {
       if (field.getAttribute("aria-invalid") === "true") validateField(field);
@@ -130,7 +129,7 @@ observeReveals();
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const fields = [...form.querySelectorAll("input[required], textarea[required]")];
+    const fields = [...form.querySelectorAll(requiredSelector)];
     const results = fields.map(validateField);
     const firstInvalid = fields[results.indexOf(false)];
     if (firstInvalid) {
@@ -139,14 +138,16 @@ observeReveals();
     }
 
     // TODO: connect a form service (e.g. Formspree, Netlify Forms or your own
-    // endpoint). Until then the form only confirms locally and sends nothing.
+    // endpoint). Until then forms only confirm locally and send nothing.
     // Example:
     //   await fetch(form.action, { method: "POST", body: new FormData(form),
     //                              headers: { Accept: "application/json" } });
 
     form.reset();
     fields.forEach((f) => f.removeAttribute("aria-invalid"));
-    status.hidden = false;
-    status.focus();
+    if (status) {
+      status.hidden = false;
+      status.focus();
+    }
   });
-})();
+});

@@ -22,7 +22,8 @@ css/style.css   all styles (brand colours are CSS variables at the top)
 js/main.js      mobile menu, active nav link, footer year, scroll reveal, contact form
 js/posts.js     blog content: edit this to add or change posts
 js/blog.js      renders the blog, post, category and tag pages from posts.js
-images/         logo, favicons, hero and blog images
+images/         logo, favicons, hero, blog and banner images (banner/*.jpg are
+                the optimised 1600w and -800 versions; the .png sources are not used)
 ```
 
 ## Adding a blog post
